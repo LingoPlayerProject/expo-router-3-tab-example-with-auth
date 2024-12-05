@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, View, TextInput } from "@/components/Themed";
 import { Alert, SafeAreaView, TouchableOpacity } from "react-native";
 import { useAuth } from "@/context/AuthProvider";
+import { Link } from "expo-router";
 
 export default function login() {
   const [username, setUsername] = useState("");
@@ -45,6 +46,7 @@ export default function login() {
           title="Log in"
           onPress={() => _login(username, password)}
         />
+        <Link push href="(public)/hello">hello</Link>
       </View>
     </SafeAreaView>
   );
